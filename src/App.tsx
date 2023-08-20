@@ -3,9 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import NavBar from './components/NavBar';
+import Box from '@material-ui/core/Box';
 function App() {
   return (
-    <div className="App">
+    <Box sx={{ mt: "40px" }}>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -13,7 +14,7 @@ function App() {
           <Route path="/cart" element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </Box>
   );
 }
 

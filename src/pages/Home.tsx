@@ -1,71 +1,37 @@
-// import React from 'react'
-// import {
-//   AppBar,
-//   Toolbar,
-//   CssBaseline,
-//   Typography,
-//   makeStyles,
-//   Box
-// } from "@material-ui/core";
-// import { Link } from "react-router-dom";
-// import App from '../App';
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2),
-//   },
-//   title: {
-//     flexGrow: 1,
-//   },
-// }));
-
-// function Home() {
-
-//    const classes  = useStyles();
-//   return (
-
-//     <
-//     <AppBar position='static'>
-//       <Toolbar>
-//         <Typography variant="h4">
-//           Redux Store
-//         </Typography>
-//         <Box component="span" m={500}>
-//           <Link to="/">
-//             Home
-//           </Link>
-//         </Box>
-//         <Box component="span" m={500}>
-//           <Link to="/cart">
-//             Cart
-//           </Link>
-//         </Box>
-//         <Typography variant="h4">
-//           CART ITEMS :0
-//         </Typography>
-//       </Toolbar>
-//     </AppBar>
-//   )
-// }
-
-// export default Home
-
-import React from 'react'
 import Products from '../components/Products'
+import Box from '@material-ui/core/Box';
+import { AppBar, makeStyles, Typography, styled } from "@material-ui/core";
 
-function Home() {
+const useStyles = makeStyles((theme) => ({
+  navlinks0: {
+    backgroundColor: '#FAF9F6',
+  },
+  navlinks1: {
+    marginLeft: theme.spacing(2),
+  },
+  navlinks2: {
+    marginTop: theme.spacing(1),
+
+  },
+}));
+
+const Home = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <h2 className="heading"> Welcome to the Redux toolkit store</h2>
-      <section>
+    <Box className={classes.navlinks0}>
+      <Box className={classes.navlinks1}>
+        <Typography variant="h6">
+          Welcome to the Redux toolkit store
+        </Typography>
 
-        <h3>products</h3>
+        <Typography variant="h6">
+          Products
+        </Typography>
+      </Box>
+      <Box className={classes.navlinks2}>
         <Products />
-      </section>
-    </div>
+      </Box>
+    </Box>
   )
 }
 
