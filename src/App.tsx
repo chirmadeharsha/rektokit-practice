@@ -1,21 +1,46 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home';
-import Cart from './pages/Cart';
-import NavBar from './components/NavBar';
-import Box from '@material-ui/core/Box';
-function App() {
+import './App.css'
+import './index.css'
+import { ThemeProvider, createTheme, makeStyles, Box } from '@material-ui/core'
+import HeaPage from './features/hea/components/heaPage'
+
+// ** Creating Them From Material UI
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#353450'
+    },
+    secondary: {
+      main: '#f73563'
+    }
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif'
+  }
+})
+const useStyles = makeStyles(() => ({
+  container: {
+    backgroundColor: '#f5f8fb',
+    width: '100%'
+  },
+  content: {
+    padding: '0 2%',
+    height: '100vh'
+  }
+}))
+
+const App: React.FC = () => {
+  
+  const classes = useStyles()
+
   return (
-    <Box sx={{ mt: "40px" }}>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </Box>
-  );
+    <ThemeProvider theme={theme}>
+      <Box className={classes.container}>
+        <Box className={classes.content}>
+        <HeaPage/>
+        </Box>
+      </Box>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
