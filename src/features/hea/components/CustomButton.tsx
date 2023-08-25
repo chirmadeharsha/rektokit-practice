@@ -6,7 +6,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     padding: '10px 1rem',
     marginLeft: '0.5rem',
-    textTransform: 'none'
+    textTransform: 'none',
+    width:'10%',
+    height:'77%',
   }
 }))
 

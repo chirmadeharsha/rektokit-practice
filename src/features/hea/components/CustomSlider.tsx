@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       height: "5rem",
     },
     "& .MuiSlider-root": {
-      color: "#e0dfe0",
+      color: "#e1ddde",
       display: "flex",
       alignItems: "center",
       width: "95%",

@@ -4,10 +4,10 @@ import { FormGroup, InputLabel, TextField, makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   inputContainer: {
     display: 'flex',
-    width: '80%',
+    width: '95%',
     marginBottom: '0.3rem',
     [theme.breakpoints.up('sm')]: {
-      flexDirection: 'column',
+      flexDirection: 'row',
     }
   },
   input: {
@@ -15,13 +15,13 @@ const useStyles = makeStyles(theme => ({
     color: 'black',
     backgroundColor: 'white',
     [theme.breakpoints.up('sm')]: {
-      padding: '0.8rem 1rem',
-      width: '100%'
+      padding: '0.4rem 1rem',
+      width: '300px'
     },
     [theme.breakpoints.down('sm')]: {
       padding: '10px 1rem'
     },
-    width: '100%'
+    width: '300%'
   },
   inputLabel: {
     textAlign: 'start',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     padding: '0.3rem 0rem',
     marginTop: '0.3rem',
-    color: 'grey',
+    color: 'rgb(76, 86, 100)',
     width: '115px'
   }
 }))

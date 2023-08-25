@@ -13,21 +13,40 @@ import { updateDialogModal } from "../../../store/heaDialogModal";
 
 // ** MATERIAL UI MAKESTYLES CHANGES
 const useStyles = makeStyles((theme) => ({
+ 
   dialogModalContainer: {
+   
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "90%",
-    height: "90%",
+    width: "70%",
+    height: "92%",
     backgroundColor: "white",
-    borderRadius: "10px",
+    borderRadius: "6px",
     padding: "6px 16px",
     border: "0px",
+    // overflowY: "scroll",
+    // scrollbarWidth: "thin",
     overflowY: "auto",
     "&:focus": {
       outline: "none",
     },
+    '&::-webkit-scrollbar': {
+      width: '6px',
+      borderRadius: '10px',
+  },
+  '&::-webkit-scrollbar-thumb': {
+    marginTop: '10px !important',
+    backgroundColor: '#e1ddde', 
+    borderRadius: '10px',
+   }, 
+    '&::-webkit-scrollbar-thumb,& *::-webkit-scrollbar-thumb': {
+    minHeight: 8,
+    backgroundColor: '#dcdcdb', 
+    borderRadius: '10px',
+   }, 
+    overflowX: "hidden",
   },
   buttonContainer: {
     marginTop: "0.5rem",
@@ -42,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   energyAssessmentTitle: {
+    color: "rgb(76, 86, 100)",
     marginRight: "2rem",
     display: "flex",
     [theme.breakpoints.down("sm")]: {
@@ -79,6 +99,7 @@ const HeaPage: React.FC = () => {
         </Box>
         <Box display="flex" className={classes.energyAssessmentBarContainer}>
           <Typography
+            sx={{ color: "#00adb5" }}
             id="energy-assessment"
             variant="h6"
             noWrap
@@ -94,7 +115,7 @@ const HeaPage: React.FC = () => {
 
         <Box
           className={classes.buttonContainer}
-          justifyContent= "space-between"
+          justifyContent="end"
           display="flex"
         >
           <HeaButton
